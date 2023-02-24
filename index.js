@@ -14,6 +14,14 @@ const START_MESSAGE = `
 Приятного аппетита 😋
 `;
 
+bot.telegram.setChatMenuButton({
+    type: "web_app",
+    text: 'Menu',
+    web_app: {
+        url: 'https://menuda.ru/menu'
+    }
+});
+
 bot.start((ctx) => ctx.reply(START_MESSAGE));
 bot.help((ctx) => ctx.reply(START_MESSAGE));
 
